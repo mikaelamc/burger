@@ -1,9 +1,9 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
-require('dotenv').config()
+
 
 var config = require('./config')
-  console.log(config);
+
 var connection;
 // If I am in hosted/production mode, use line 6, else use the other connection
 if(process.env.JAWSDB_URL) {
