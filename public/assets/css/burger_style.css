@@ -18,3 +18,27 @@ li {
     margin-bottom: 5px;
   }
   
+  #header {
+    padding: 100px;
+    text-align: center;
+    background: rebeccapurple;
+    width: 100%;
+    color: white;
+  }
+
+  #devoured {
+    width: 320px;
+    padding: 5px;
+    border: 5px solid gray;
+    
+    float: right;
+}
+
+#Add {
+  width: 320px;
+  padding: 5px;
+  border: 5px solid gray;
+  
+  
+
+}
