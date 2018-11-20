@@ -1,46 +1,45 @@
 <h2 id="header">Let's Eat Some Burgers!</h2>
 
-<u1 id="Menu"> Menu
-  <li>Cheese Burger</li>
+<u1 id="Menu"> Eat the Burger
+  {{!-- <li>Cheese Burger</li>
   <li>Bacon Cheese Burger</li>
   <li>Bacon Cheese Burger Deluxe</li>
   <li>Create Your Own</li>
-</u1>
+</u1> --}}
 
 <ul>
-  {{#each Burger}}
-    {{#unless Devoured}}
-      {{> Burgers/burger-block Devoured=true}}
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2 id = "devoured">Burgers That Have Been Devoured!</h2>
+<h2>Burgers That Have Been Devoured!</h2>
 
 <ul>
-  {{#each Burger}}
-    {{#if Devoured}}
-      {{> Burgers/burger-block Devoured=false}}
+  {{#each burger}}
+    {{#if devoured}}
+      {{> burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
 
-<h2 id = "Add">Add a Burger to the Menu</h2>
+<h2>Burger You Should Eat </h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="burger1">Order Burger Here:</label>
-    <input type="text" id="burger1" name="burger_name">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="burger_name">
   </div>
 
-  <br>
-
   <div class="form-group">
-    <label for="devoured">BURGER LOG</label><br>
-    <br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <label for="devoured">What happened to the Burger ?</label><br>
+    <input type="radio" name="devoured" value="1" checked> It was devoured!<br>
     <input type="radio" name="devoured" value="0"> Hasn't Been Eaten
   </div>
 
   <button type="submit">Add Burger</button>
 </form>
+
+
