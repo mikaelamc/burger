@@ -6,8 +6,8 @@ var connection = require("./connection.js");
 // In order to write the query, we need 3 question marks.
 // The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
-function printBurgers(num) {
-  var arr = [];connection
+function printQuestionMarks(num) {
+  var arr = [];
 
   for (var i = 0; i < num; i++) {
     arr.push("?");
@@ -56,7 +56,7 @@ var orm = {
     queryString += cols.toString();
     queryString += ") ";
     queryString += "VALUES (";
-    queryString += printBurgers(vals.length);
+    queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
     console.log(queryString);

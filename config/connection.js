@@ -2,7 +2,7 @@
 var mysql = require("mysql");
 
 
-var config = require('./config')
+var config = require('../.env')
 
 var connection;
 // If I am in hosted/production mode, use line 6, else use the other connection
